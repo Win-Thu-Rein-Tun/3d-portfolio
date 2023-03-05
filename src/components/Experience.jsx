@@ -14,8 +14,10 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>WHAT I HAVE DONE SO FAR</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        <div className="flex flex-col w-full justify-center items-center">
+          <p className={styles.sectionSubText}>WHAT I HAVE DONE SO FAR</p>
+          <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        </div>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
@@ -57,7 +59,10 @@ const ExperienceCard = ({ experience }) => {
       </div>
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
-          <li key={index} className="text-white-100 text-[14px] pl-1 tracking-wider">
+          <li
+            key={index}
+            className="text-white-100 text-[14px] pl-1 tracking-wider"
+          >
             {point}
           </li>
         ))}
